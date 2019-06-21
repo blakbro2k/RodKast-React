@@ -10,11 +10,10 @@ import React, {Component} from 'react';
 import {Platform, Text, View, TouchableHighlight, ScrollView} from 'react-native';
 import {Button, ThemeProvider, Icon, Image} from 'react-native-elements';
 
-import HeaderView from './Header'
 import styles from './Style';
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class PlaylistView extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
