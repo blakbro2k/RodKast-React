@@ -11,6 +11,7 @@ const styles = EStyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '$rodkastBlue',
+    color: "#fff",
   },
 
   firstrow: {

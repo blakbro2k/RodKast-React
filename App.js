@@ -10,8 +10,9 @@ import React, {Component} from 'react';
 import {Platform, Text, View, TouchableHighlight, ScrollView} from 'react-native';
 import {Button, ThemeProvider, Icon, Image} from 'react-native-elements';
 
-import HeaderView from './Header'
-import styles from './Style';
+import HeaderView from './header'
+import {EpisodeCmp, PlaylistView} from './content'
+import styles from './style';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -52,22 +53,9 @@ render() {
               <HeaderView/>
               <TabbedView/>
               <ScrollView>
-                  <View>
-                    <Text style={styles.firstrow}> Example for ScrollView and Fixed Footer</Text>
-                  </View>
-                  <View>
-                    <Text style={styles.secondrow}> Example for ScrollView and Fixed Footer</Text>
-                  </View>
-                  <View>
-                    <Text style={styles.thirdrow}> Example for ScrollView and Fixed Footer</Text>
-                  </View>
-                  <View>
-                    <Text style={styles.fourthrow}> Example for ScrollView and Fixed Footer</Text>
-                  </View>
-                  <View>
-                    <Text style={styles.firstrow}> Example for ScrollView and Fixed Footer</Text>
-                  </View>
-               </ScrollView>
+                <PlaylistView/>
+              </ScrollView>
+              <EpisodeCmp/>
         </View>
     );
   }
