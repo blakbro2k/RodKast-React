@@ -50,12 +50,12 @@ class ContainerView extends React.Component {
 render() {
     return(
         <View>
-              <HeaderView/>
+           <HeaderView/>
               <TabbedView/>
               <ScrollView>
                 <PlaylistView/>
               </ScrollView>
-              <EpisodeCmp/>
+           <EpisodeCmp/>
         </View>
     );
   }
