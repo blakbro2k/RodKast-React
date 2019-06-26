@@ -14,14 +14,16 @@ const styles = EStyleSheet.create({
     color: "#fff",
   },
 
-  firstrow: {
-    flex: 1,
-    backgroundColor: "#ffc857",
+  icon: {
+    flex: .36,
+    height: 65,
+    width: 55,
   },
 
-  secondrow: {
-    flex: 1,
-    backgroundColor: "#4b3f72",
+  endComponent: {
+    flex: .2,
+    height: 65,
+    width: 12,
   },
 
   thirdrow: {
