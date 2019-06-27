@@ -19,7 +19,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <ContainerView/>
+        <ContainerView style={styles.bottomButtons}/>
         <FooterView/>
       </View>
     );
@@ -51,11 +51,10 @@ render() {
     return(
         <View>
            <HeaderView/>
-              <TabbedView/>
-              <ScrollView>
-                <PlaylistView/>
-              </ScrollView>
-           <EpisodeCmp/>
+           <TabbedView/>
+           <ScrollView>
+              <PlaylistView/>
+           </ScrollView>
         </View>
     );
   }

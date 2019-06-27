@@ -16,21 +16,22 @@ type Props = {};
 export class EpisodeCmp extends Component<Props> {
   renderRow(){
         return (
-            <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
+            <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row', height: 70 }}>
                 <View style={styles.icon}>
                     <Image
                     source={{ uri: 'https://rodkast.com/wp-content/uploads/2018/01/rodkast-logo_1.jpg' }}
                     style={{ width: 55, height: 55 }}
                     />
                 </View>
-                <View style={styles.container}>
+                <View style={styles.episodeBody}>
                     <Text style={{ color: '#fff'}}>Title</Text>
                     <Text style={{ color: '#fff'}}>Description</Text>
                     <Text style={{ color: '#fff'}}>Date</Text>
+                    <Progress.Bar progress={0.3} width={260} />
                 </View>
                 <View style={styles.endComponent}>
-                    <Icon name='favorite' color='#fff'/>
-                    <Icon name='get_app' color='#fff' type='material'/>
+                    <Icon name='favorite-border' color='#fff'/>
+                    <Icon name='get-app' color='#fff' type='material'/>
                     <Text style={{ color: '#fff'}}>00:00</Text>
                 </View>
             </View>
@@ -54,19 +55,18 @@ export class PlaylistView extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
-        <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
+           <EpisodeCmp/>
       </View>
     );
   }

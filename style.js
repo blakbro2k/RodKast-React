@@ -15,20 +15,21 @@ const styles = EStyleSheet.create({
   },
 
   icon: {
-    flex: .36,
-    height: 65,
+    flex: .2,
+    height: 70,
     width: 55,
   },
 
   endComponent: {
     flex: .2,
-    height: 65,
+    height: 70,
     width: 12,
   },
 
-  thirdrow: {
+  episodeBody: {
     flex: 1,
-    backgroundColor: "#119da4",
+    height: 70,
+    width: 12,
   },
 
   fourthrow: {
