@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, Text, View, TouchableHighlight, ScrollView} from 'react-native';
 import {Image, Icon} from 'react-native-elements';
+import * as Progress from 'react-native-progress';
 
 import styles from './style';
 

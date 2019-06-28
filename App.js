@@ -7,18 +7,53 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, Text, View, TouchableHighlight, ScrollView} from 'react-native';
+import {Modal, Platform, Text, View, TouchableHighlight, ScrollView} from 'react-native';
 import {Button, ThemeProvider, Icon, Image} from 'react-native-elements';
 
 import HeaderView from './header'
+import PlayerView from './player';
 import {EpisodeCmp, PlaylistView} from './content'
 import styles from './style';
 
+
 type Props = {};
 export default class App extends Component<Props> {
+  state = {
+    modalVisible: false,
+  };
+
+  setModalVisible(visible) {
+    this.setState({modalVisible: visible});
+  }
+
   render() {
     return (
       <View style={styles.container}>
+              <Modal
+                animationType="slide"
+                transparent={false}
+                visible={this.state.modalVisible}
+                onRequestClose={() => {
+                  Alert.alert('Modal has been closed.');
+                }}>
+                <View style={{marginTop: 22}}>
+                  <PlayerView/>
+                  <View>
+                    <TouchableHighlight
+                      onPress={() => {
+                        this.setModalVisible(!this.state.modalVisible);
+                      }}>
+                      <Text>Hide Modal</Text>
+                    </TouchableHighlight>
+                  </View>
+                </View>
+              </Modal>
+                      <TouchableHighlight
+                        onPress={() => {
+                          this.setModalVisible(true);
+                        }}>
+                        <Text>Show Modal</Text>
+                      </TouchableHighlight>
         <ContainerView style={styles.bottomButtons}/>
         <FooterView/>
       </View>
