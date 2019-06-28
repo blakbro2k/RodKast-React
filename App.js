@@ -52,7 +52,7 @@ export default class App extends Component<Props> {
                         onPress={() => {
                           this.setModalVisible(true);
                         }}>
-                        <Text>Show Modal</Text>
+                        <Text>X</Text>
                       </TouchableHighlight>
         <ContainerView style={styles.bottomButtons}/>
         <FooterView/>

@@ -15,7 +15,7 @@ import styles from './style';
 
 type Props = {};
 export class EpisodeCmp extends Component<Props> {
-  renderRow(){
+  render(){
         return (
             <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row', height: 70 }}>
                 <View style={styles.icon}>
@@ -38,36 +38,18 @@ export class EpisodeCmp extends Component<Props> {
             </View>
         );
     }
-  render() {
-      const data = [1];
-      return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            {
-                data.map((datum) => { // This will render a row for each data element.
-                    return this.renderRow();
-                })
-            }
-            </View>
-      );
-  }
 }
 
 export class PlaylistView extends Component<Props> {
   render() {
+        const data = [1,2,3,4,5];
     return (
       <View style={styles.container}>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
-           <EpisodeCmp/>
+          {
+              data.map((datum) => { // This will render a row for each data element.
+                  return <EpisodeCmp/>;
+              })
+          }
       </View>
     );
   }
